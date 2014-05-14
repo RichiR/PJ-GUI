@@ -1,0 +1,2 @@
+USAGE:
+https://github.com/carhartl/jquery-cookie

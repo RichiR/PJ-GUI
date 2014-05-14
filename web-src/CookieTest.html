@@ -1,0 +1,18 @@
+<script src="js/jquery.js"></script>
+<script src="js/cookie/jquery.cookie.js"></script>
+
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>Titel</title>
+</head>
+<body>
+
+<input id="cookie_input" type="text" />
+<button id="buttonSet" onclick="$.cookie('example', document.getElementById('cookie_input').value )";>Set Cookie</button>
+<button id="buttonDelete" onclick="$.removeCookie('example');";>Delete Cookie</button>
+<button id="buttonShow" onclick="alert( $.cookie('example'))";>Show Cookie</button>
+
+	
+</body>
+</html>

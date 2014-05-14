@@ -1,0 +1,22 @@
+.center-wrapper{
+text-align: left;
+margin: 0 auto;
+margin-top: 100px;
+  width: 250px;
+  height: 175px;
+
+ 
+}
+
+
+.center-button{
+margin: 0 auto;
+margin-top: -100px;
+
+width: 250px;
+height: 175px;
+
+}
+
+
+

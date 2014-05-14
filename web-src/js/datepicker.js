@@ -1,0 +1,1 @@
+$( ".selector" ).datepicker({ dateFormat: "yy-mm-dd" });
