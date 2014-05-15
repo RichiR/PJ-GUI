@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile.css">
+<link rel="stylesheet" href="css/stylesheetHomeScreen.css" type="text/css">
+<link rel="stylesheet" href="css/stylesheetDokumentAnzeigen.css" type="text/css">
+
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.mobile.js"></script>
+
+<title>US5</title>
+
+</head>
+<body>
+
+<script>
+
+</script>
+
+
+<div data-role="page" id="home">
+  <!-- Kopfzeile -->
+    <div data-role="header" data-position="fixed" class="clickable_header">
+    <a href="HomeScreen.html" id="header_home_button" data-icon="home">Home</a>
+    <a href="Abmeldung.html" id="logout"  data-icon="arrow-r">Abmelden</a>
+    <!-- <label style="font-size: 15px;" class="name_doctor">Max Mustermann</label> -->
+    <h1>Max Mustermann</h1>
+    
+  </div>
+  
+   <!-- Inhaltsbereich  style="margin-top: 6px;" -->
+<div data-role="main" class="ui-content" id="DokAnzDiv">
+	<h2 style="text-align:left;">Dokument: <span id="DokName">DokuemntXYZ</span></h2>
+	<h3 style="text-align:left;">Patient: <span id="patientName">Max Mustermann</span></h3>
+	<textarea cols="40" rows="100"></textarea>
+	<div class="buttonsSmall">
+		<a href="DokumentBearbeiten.html"><button type="button" id="DokBearbeiten">Dokument bearbeiten</button></a>
+	</div>
+	<div class="buttonsSmall">
+		<a href="#dialogDokLoeschen"><button type="button" id="DokLoeschen">Dokument l&ouml;schen</button></a>
+	</div>
+</div>
+
+
+
+
+
+ <!-- Fusszeile -->
+  <div data-role="footer">
+  <!-- TODO Verlinkung zur Dokumentenliste -->
+  	<a href="#" id="footerZurueckButton" data-icon="back">Zurueck</a>
+    &copy; 2014 by US5
+  </div>
+  
+</div>
+
+<div data-role="page" data-dialog="true" id="dialogDokLoeschen">
+    <div data-role="header">
+    </div>
+    <div role="main" class="ui-content">
+    <h3 class="ui-title">Dokument l&ouml;schen</h3>
+    <p>Dokument jetzt als gel&ouml;scht markieren?</p>
+        <a href="DokumentAnzeigen.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Ja</a>
+        <a href="DokumentAnzeigen.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Nein</a>
+    </div>
+</div>
+
+
+</body>
+</html>		

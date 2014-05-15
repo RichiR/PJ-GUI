@@ -1,0 +1,14 @@
+a:link {
+	text-decoration: none;
+}
+
+.buttonsSmall {
+	float: right;
+	margin: 10px;
+	width: 250px;
+	height: 50px;
+}
+
+h2, h3 {
+	text-align: left;
+}

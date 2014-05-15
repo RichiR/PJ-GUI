@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile.css">
+<link rel="stylesheet" href="css/stylesheetHomeScreen.css" type="text/css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile.js"></script>
+
+<title>Dokumentensuche</title>
+
+</head>
+<body>
+
+<!-- Startseite -->
+<div data-role="page" id="home">
+  
+  <!-- Kopfzeile -->
+  <div data-role="header" data-position="fixed" class="clickable_header">
+    <a href="HomeScreen.html" id="header_home_button" data-icon="home">Home</a>
+    <a href="Abmeldung.html" id="logout"  data-icon="arrow-r">Abmelden</a>
+    <label style="font-size: 15px;" class="name_doctor">Max Mustermann</label>
+    <h1></h1>
+  </div>
+  
+  <!-- Inhaltsbereich -->
+  <div data-role="main" class="ui-content">
+    
+    <label for="name_tf">Medimax, Hans > Dokumentensuche</label>
+    <div data-role="content">
+      <label for="name_tf">Name</label>
+      <input type="text" id="name_tf"></input>
+            
+      <label for="category_sel">Kategorie</label>
+      <select id="category_sel">
+        <option>Alle</option>
+        <option>Röntgen</option>
+        <option>Blutdruck</option>
+        <option>...</option>
+      </select>
+      
+      <label for="fromdate_tf">Datum von:</label>
+      <input type="date" id="fromdate_tf"/>
+      <label for="todate_tf">Datum bis:</label>
+      <input data-role="date" type="date" id="todate_tf"></input>
+                  
+      <a href="#show_documents_tbl" id="search_btn" class="ui-btn">Suchen</a>
+    </div>
+    
+    
+  </div>
+  <!-- Fußzeile -->
+  <div data-role="footer">
+    &copy; 2014 by US5
+  </div>
+</div>
+
+<!-- Dokumentenauflistung -->
+<div data-role="page" id="show_documents_tbl">
+  <div data-role="header" data-position="fixed" class="clickable_header">
+    <a href="HomeScreen.html" id="header_home_button" data-icon="home">Home</a>
+    <a href="Abmeldung.html" id="logout"  data-icon="arrow-r">Abmelden</a>
+    <label style="font-size: 15px;" class="name_doctor">Max Mustermann</label>
+    <h1></h1>
+  </div>
+  
+  <label for="name_tf">Medimax, Hans > Dokumente</label>
+  
+  <div data-role="content">
+    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+      <thead>
+        <tr>
+          <th data-priority="1">Name</th>
+          <th data-priority="1">Datum</th>
+          <th data-priority="1">Kategorie</th>
+          <th data-priority="1">Ersteller</th>
+          <th data-priority="1">Sonstiges?!?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#openDoc">Dok1</a></td>
+          <td>01.01.1970</td>
+          <td>Röntgen</td>
+          <td>Dr. Mustermann</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Fußzeile -->
+  <div data-role="footer">
+    <a href="#home" data-icon="home">Zurück</a>
+    &copy; 2014 by US5
+  </div>
+      
+</div>
+
+</body>
+</html>
