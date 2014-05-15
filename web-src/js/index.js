@@ -4,44 +4,36 @@ handler.bindEvents = function() {
 	$("#testdaten").click(function() {
 		
 		var ergebnis="";
-	
-	//Patienten löschen & aktualisieren	
+
+	//Alte Daten löschen
 	jQuery.ajax({
 	
-	//url: '/einstieg2014/rest/...',
-	//type: 'GET'
+	url: 'http://localhost:8080/einstieg2014/rest/patient/remove/all',
+	type: 'GET',
+	async: false,
+	
 		}).done(function(data) {
-			ergebnis += "Patienten l&ouml;schen und schreiben: Erfolg.\n";	
+			ergebnis += "Alte Daten löschen: Erfolg.\n";	
 		}).fail(function(error) {
-			ergebnis += "Patienten l&ouml;schen und schreiben: Fail.\n"
+			ergebnis += "Alte Daten löschen: Fail.\n"
 		});
-	});	
 	
-	//Dokumente löschen & aktualisieren
+	//Daten aktualisieren
 	jQuery.ajax({
 		
-		//url: '/einstieg2014/rest/...',
-		//type: 'GET'
+		url: 'http://localhost:8080/einstieg2014/rest/patient/create/all',
+		type: 'GET',
+		//Anfrage erst ganz zu Ende ausführen, danach erst das Ergebnis ausgeben --> deswegen ausnahmsweise synchon
+		async: false,
 			}).done(function(data) {
-				ergebnis += "Dokumente l&ouml;schen und schreiben: Erfolg.\n";	
+				ergebnis += "Daten schreiben: Erfolg.\n";	
 			}).fail(function(error) {
-				ergebnis += "Dokumente l&ouml;schen und schreiben: Fail.\n"
+				ergebnis += "Daten schreiben: Fail.\n"
 			});
-		});
+	
+	alert(ergebnis);
+});
 		
-	//User löschen & aktualisieren
-	jQuery.ajax({
-		
-		//url: '/einstieg2014/rest/...',
-		//type: 'GET'
-			}).done(function(data) {
-				ergebnis += "User l&ouml;schen und schreiben: Erfolg.\n";	
-			}).fail(function(error) {
-				ergebnis += "User l&ouml;schen und schreiben: Fail.\n"
-			});
-		});
-		
-		alert(ergebnis);
 };
 
 

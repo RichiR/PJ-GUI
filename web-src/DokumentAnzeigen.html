@@ -1,3 +1,10 @@
+
+<!-- TODO 
+Diese Sicht muss beinhalten: 
+DokID
+ -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +41,11 @@
 <div data-role="main" class="ui-content" id="DokAnzDiv">
 	<h2 style="text-align:left;">Dokument: <span id="DokName">DokuemntXYZ</span></h2>
 	<h3 style="text-align:left;">Patient: <span id="patientName">Max Mustermann</span></h3>
-	<textarea cols="40" rows="100"></textarea>
+
+	<div id="dokInhalt" data-dokId="Hier_kommt_Dok_Id_rein">
+		<textarea cols="40" rows="100"></textarea>
+	</div>	
+
 	<div class="buttonsSmall">
 		<a href="DokumentBearbeiten.html"><button type="button" id="DokBearbeiten">Dokument bearbeiten</button></a>
 	</div>
