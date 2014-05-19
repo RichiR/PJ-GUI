@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PJ-GUI" default="deploy">
+	<property file="build.properties"/>
+    <target name="deploy" depends="pack">
+        <copy file="gui.war" 
+        	  tofile="${jboss.path}/standalone/deployments/gui.war"/>
+    </target>
+
+    <target name="pack">
+    	<jar destfile="gui.war">
+    		<fileset dir="./web-src">
+    			<include name="**/*.*"/>
+			</fileset>
+    	</jar>
+    </target>
+	
+
+
+</project>
