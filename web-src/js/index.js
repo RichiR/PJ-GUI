@@ -4,7 +4,7 @@ handler.bindEvents = function() {
 	$("#testdaten").click(function() {
 		
 		var ergebnis="";
-
+	
 	//Alte Daten löschen
 	jQuery.ajax({
 	

@@ -3,7 +3,6 @@
 Diese Sicht muss beinhalten (Dialog nach dem Erstellen): 
 DokID
  -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +12,8 @@ DokID
 <link rel="stylesheet" href="css/stylesheetDokumentErstellen.css" type="text/css">
 
 <script src="js/jquery.js"></script>
-
 <script src="js/jquery.mobile.js"></script>
 <script src="js/dokument_erstellen.js"></script>
-
 
 
 <title>US5</title>
@@ -104,10 +101,9 @@ DokID
     </div>
     <div role="main" class="ui-content">
     <h3 class="ui-title">Dokument erstellt</h3>
-
     <p id="dokID" data-dokId="Hier_kommt_die_DokId_rein">Dokument jetzt anzeigen?</p>
     	<!-- TODO Hier ajax Anfrage die das Dokument sucht -->
-        <a href="DokumentAnzeigen.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Ja</a>
+        <a href="DokumentAnzeigen.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="DokAnzeigen">Ja</a>
        <!--  TO DO: Verlinkung hier zur Dokumentenliste -->
         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Zur&uuml;ck zur Liste</a>
     </div>

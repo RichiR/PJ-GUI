@@ -38,11 +38,7 @@ handler.loadDok = function() {
 			        output += '<li>' + data[key].firstName + '</li>';
 			    }
 				
-				
 				$('#searchPat').append(output).trigger('create');*/
-				
-				$('#DokName').val(data.filename);
-				$('#docContent').val(data.content);
 				
 				//DokId speichern
 				$("#dokInhalt").data("dokId", id);

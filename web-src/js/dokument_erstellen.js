@@ -30,9 +30,18 @@ handler.bindDokEvents = function() {
 				//Die dokumentenID des gerade erstellten Doks (wird zurückgegeben) schreiben in die DokID
 				//Hier evtl doch einfach alles in Cookie ? 
 				$("#dokID").data("dokId", data.docId);
+				//console.log("Zurückgegebene Daten:" + data);
+				console.log("Inhalt dokID:" + $("#dokID").data("dokId"));
 			}).fail(function(error) {
 				
 			});
+		
+	});
+	
+	$("#DokAnzeigen").click(function(){
+		var dokId = $("#dokID").data("dokId");
+		
+		$("#DokAnzeigen").attr("href", "DokumentAnzeigen.html?id="+dokId);
 		
 	});
 		

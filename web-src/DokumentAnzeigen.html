@@ -1,9 +1,7 @@
-
 <!-- TODO 
 Diese Sicht muss beinhalten: 
 DokID
  -->
-
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +14,8 @@ DokID
 <script src="js/jquery.js"></script>
 
 <script src="js/jquery.mobile.js"></script>
+
+<script src="js/dokument_anzeigen.js"></script>
 
 <title>US5</title>
 
@@ -41,13 +41,11 @@ DokID
 <div data-role="main" class="ui-content" id="DokAnzDiv">
 	<h2 style="text-align:left;">Dokument: <span id="DokName">DokuemntXYZ</span></h2>
 	<h3 style="text-align:left;">Patient: <span id="patientName">Max Mustermann</span></h3>
-
 	<div id="dokInhalt" data-dokId="Hier_kommt_Dok_Id_rein">
-		<textarea id="docContent" cols="40" rows="100"></textarea>
+		<textarea cols="40" rows="100"></textarea>
 	</div>	
-
 	<div class="buttonsSmall">
-		<a href="DokumentBearbeiten.html"><button type="button" id="DokBearbeiten">Dokument bearbeiten</button></a>
+		<a href="DokumentBearbeiten.html" id="aDokBearbeiten"><button type="button" id="DokBearbeiten">Dokument bearbeiten</button></a>
 	</div>
 	<div class="buttonsSmall">
 		<a href="#dialogDokLoeschen"><button type="button" id="DokLoeschen">Dokument l&ouml;schen</button></a>

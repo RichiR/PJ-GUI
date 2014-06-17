@@ -1,10 +1,8 @@
-
 <!-- TODO 
 Diese Sicht muss beinhalten: 
 PatID
 für jedes Dokument: DokID
  -->
-
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +13,6 @@ für jedes Dokument: DokID
 <script src="js/jquery.js"></script>
 <script src="js/jquery.mobile.js"></script>
 <script src="js/dokumente_suchen.js"></script>
-
 
 <title>Dokumentensuche</title>
 
@@ -76,7 +73,6 @@ für jedes Dokument: DokID
   </div>
   
   <label for="name_tf" data-patId="hier_kommt_patId_rein">Medimax, Hans > Dokumente</label>
-
   
   <div data-role="content">
     <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
@@ -88,16 +84,10 @@ für jedes Dokument: DokID
           <th data-priority="1">Ersteller</th>
           <th data-priority="1">Sonstiges?!?</th>
         </tr>
+        
       </thead>
-      <tbody>
-
-        <tr id ="line1">
-          <td data-dokId="Hier_kommt_Dok_Id_rein"><a href="DokumentAnzeigen.html">Dok1</a></td>
-          <td>01.01.1970</td>
-          <td>Röntgen</td>
-          <td>Dr. Mustermann</td>
-          <td>-</td>
-        </tr>
+      <tbody id=insertValues>
+    	<!-- Hier werden automatisch die Werte der ajax-Suche eingetragen; Code in dokumente_suchen.js -->    
       </tbody>
     </table>
   </div>

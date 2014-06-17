@@ -7,6 +7,7 @@
 <script src=js/datepicker.js></script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.mobile.js"></script>
+<script src="js/patient_suchen.js"></script>
 
 
 <title>Name des Produkts</title>
@@ -41,8 +42,9 @@
 
 </div>
      
-<div class="search_button"><button  type="button" data-theme="b" >Suchen</button>
-</div>
+     <a href="#show_patient_tbl" id="suchButton">Suchen</a>
+<!-- <div class="search_button"><button  type="button" data-theme="b" id="suchButton">Suchen</button>
+</div> -->
      
 <div class="config_button"><button data-icon="gear">Einstellungen</button>
 </div>
@@ -55,6 +57,30 @@
     &copy; 2014 by PJMI2014 123
   </div>
   
+</div>
+
+
+<!-- Patientenauflsitung -->
+<div data-role="page" id="show_patient_tbl">
+  <div data-role="header" data-position="fixed" class="clickable_header">
+    <a href="HomeScreen.html" id="header_home_button" data-icon="home">Home</a>
+    <a href="Abmeldung.html" id="logout"  data-icon="arrow-r">Abmelden</a>
+    <label style="font-size: 15px;" class="name_doctor">Max Mustermann</label>
+    <h1></h1>
+  </div>
+  
+  <label class="PatientenAuflistung" >Gefundene(n) Patient(en)</label>
+  
+  <div data-role="content">
+        <ul data-role="listview" data-inset="true" id="searchPat"></ul>
+    </div>
+  
+  <!-- Fußzeile -->
+  <div data-role="footer">
+    <a href="#home" data-icon="home">Zurück</a>
+    &copy; 2014 by US5
+  </div>
+      
 </div>
 
 </body>
