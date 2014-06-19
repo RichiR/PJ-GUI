@@ -19,8 +19,8 @@ handler.bindDokEvents = function() {
 	if ($("#txtID").val()==""){
 	jQuery.ajax({
 		
-	type: 'GET',
-	url: "http://localhost:8080/patrepo/rest/PatientenRepository/findPat?firstname="+firstName+"&lastname="+name+"&Bday="+date,
+	type: 'GET',                                            
+	url: "http://localhost:8080/patrepo/rest/PatientRepository/findPat?firstname="+firstName+"&lastname="+name+"&Bday="+date,
 	
 	contentType: "application/json",
 	
