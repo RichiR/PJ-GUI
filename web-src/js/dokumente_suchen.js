@@ -12,7 +12,7 @@ handler.bindDokEvents = function() {
 		//direkte Eingabe in Browser funktioniert
 		//http://localhost:8080/einstieg2014/rest/DocumentStorage/findDocs?filename=Arztbrief&category=Sonographie&dtFrom=2010-12-02&dtUntil=2010-12-04
 		jQuery.ajax({
-			url: 'http://localhost:8080/einstieg2014/rest/DocumentStorage/findDocs?filename='+name+'&category='+cat+'&dtFrom='+From+'&dtUntil='+Until,
+			url: 'http://localhost:8080/dbservices/rest/DocumentStorage/findDocs?filename='+name+'&category='+cat+'&dtFrom='+From+'&dtUntil='+Until,
 			type: 'GET'
 		}).done (function(data){
 				

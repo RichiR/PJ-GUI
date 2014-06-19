@@ -39,13 +39,28 @@ DokID
   
    <!-- Inhaltsbereich  style="margin-top: 6px;" -->
 <div data-role="main" class="ui-content" id="DokAnzDiv">
-	<h2 style="text-align:left;">Dokument: <span id="DokName">DokuemntXYZ</span></h2>
-	<h3 style="text-align:left;">Patient: <span id="patientName">Max Mustermann</span></h3>
+	<h2 style="text-align:left;">Dokument anzeigen: <span id="DokName">DokuemntXYZ</span></h2>
+	<div data-role="fieldcontain">
+	    <label for="name">Dokumentenname:</label>
+	    <input type="text" name="disabled" id="name" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="datum">Erstelldatum:</label>
+	    <input type="text" name="disabled" id="datum" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="kategorie">Kategorie:</label>
+	    <input type="text" name="disabled" id="kategorie" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="art">Art:</label>
+	    <input type="text" name="disabled" id="art" value=""  />
+	</div>
 	<div id="dokInhalt" data-dokId="Hier_kommt_Dok_Id_rein">
-		<textarea cols="40" rows="100"></textarea>
+		<textarea id="inhalt" cols="40" rows="100" name="disabled"></textarea>
 	</div>	
 	<div class="buttonsSmall">
-		<a href="DokumentBearbeiten.html" id="aDokBearbeiten"><button type="button" id="DokBearbeiten">Dokument bearbeiten</button></a>
+		<button type="button" id="DokBearbeiten">Dokument bearbeiten</button>
 	</div>
 	<div class="buttonsSmall">
 		<a href="#dialogDokLoeschen"><button type="button" id="DokLoeschen">Dokument l&ouml;schen</button></a>

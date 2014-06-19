@@ -18,20 +18,22 @@ handler.bindDokEvents = function() {
 	
 	jQuery.ajax({
 	
-		url: 'http://localhost:8080/einstieg2014/rest/DocumentStorage/createDoc',
+		url: 'http://localhost:8080/dbservices/rest/DocumentStorage/createDoc',
 		type: 'POST',
 		data: jsonString,
 		contentType: "application/json",
 		dataType: "json",
-		//sonst kann sein, dass man das Dokument anzeigen möchte, bevor es fertig in die DB geschrieben wurde
+		//Dokument soll erst nach dem Erstellen angezeigt werden 
 		async: false,
 		
 			}).done(function(data) {
 				//Die dokumentenID des gerade erstellten Doks (wird zurückgegeben) schreiben in die DokID
-				//Hier evtl doch einfach alles in Cookie ? 
-				$("#dokID").data("dokId", data.docId);
+				//$("#dokID").data("dokId", data.docId);
+				//$("#LinkDokErstellt").attr("href", "DokumentAnzeigen.html?id="+data.docId);
+				console.log("Erstelltes Dokument:" + data);
+				window.location="http://localhost:8080/gui/DokumentAnzeigen.html?id="+data.docId;
 				//console.log("Zurückgegebene Daten:" + data);
-				console.log("Inhalt dokID:" + $("#dokID").data("dokId"));
+				//console.log("Inhalt dokID:" + $("#dokID").data("dokId"));
 			}).fail(function(error) {
 				
 			});
@@ -43,6 +45,11 @@ handler.bindDokEvents = function() {
 		
 		$("#DokAnzeigen").attr("href", "DokumentAnzeigen.html?id="+dokId);
 		
+	});
+	$("#AbbrechBtn").click(function(){
+		$("#DokName").val("");
+		$("#ErstellDatum").val("");
+		$("#DokInhalt").val("");
 	});
 		
 };

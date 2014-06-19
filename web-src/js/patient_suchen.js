@@ -1,6 +1,6 @@
 var handler = handler || {};
 
-handler.bindDokEvents = function() {
+handler.bindHomeEvents = function() {
 	$("#suchButton").click(function() {
 		
 		var firstName="";
@@ -20,7 +20,7 @@ handler.bindDokEvents = function() {
 	jQuery.ajax({
 		
 	type: 'GET',
-	url: "http://localhost:8080/einstieg2014/rest/PatientenRepository/findPat?firstname="+firstName+"&lastname="+name+"&Bday="+date,
+	url: "http://localhost:8080/patrepo/rest/PatientRepository/findPat?firstname="+firstName+"&lastname="+name+"&Bday="+date,
 	
 	contentType: "application/json",
 	
@@ -77,5 +77,5 @@ handler.bindDokEvents = function() {
 
 
 $(document).ready(function(){
-	handler.bindDokEvents();
+	handler.bindHomeEvents();
 });

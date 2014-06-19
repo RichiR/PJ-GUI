@@ -15,6 +15,7 @@ DokID
 <script src="js/jquery.js"></script>
 
 <script src="js/jquery.mobile.js"></script>
+<script src="js/dokument_bearbeiten.js"></script>
 
 
 <title>US5</title>
@@ -38,8 +39,7 @@ DokID
 
 <div data-role="main" class="ui-content" id="mainDiv">
 
-	<h2> Dokument bearbeiten</h2>
-	<h3>Patient: <span id="patientName">Max Mustermann</span></h3>
+	<h2> Dokument bearbeiten: <span id="DokNameId" data-dokId=""></span></h2>
 	<div data-role="fieldcontain" data-dokId="Hier_kommt_Dok_Id_rein">
 		<label for="DokName">Dokumentenname:</label>
 		<input id="DokName"></input>
@@ -64,10 +64,10 @@ DokID
 	
 	 
 	 <div class="buttonsSmall">
-	 	<a href="DokumentAnzeigen.html"><button type="button" id="AbbrechBtn" data-icon="delete">Abbrechen</button></a>
+	 	<button type="button" id="AbbrechBtn" data-icon="delete">Abbrechen</button>
 	 </div>
 	 <div class="buttonsSmall">
-	 	<a href="#dialogDokGespeichert"><button type="button" id="GespeichertBtn" data-icon="refresh">Speichern</button></a>
+	 	<button type="button" id="GespeichertBtn" data-icon="refresh">Speichern</button>
 	 </div>
 	 
 	 
