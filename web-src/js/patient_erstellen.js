@@ -1,35 +1,32 @@
 var handler = handler || {};
 
-handler.bindDokEvents = function() {
-	$("#ErstellBtn").click(function() {
+handler.bindPatEvents = function() {
+	$("#newPatBtn").click(function() {
 		
 	//get all contents from html fields
 	var vorname =  $("#vorname_tf").val();
 	var name =  $("#name_tf").val();
 	var bdate = $("#gebtag_tf").val();
+	var geschlecht = $("input:radio[name=geschlecht_rd]:checked").val();
 	
-		
 	//create json object
-	var dokJson = {"id":"4444","firstName":vorname,"name":name,"birthDate":bdate};
+	var dokJson = {"firstname":vorname,"lastname":name,"bday":bdate,"gender":geschlecht,};
 	jsonString = JSON.stringify(dokJson);
 	
 	
 	jQuery.ajax({
 	
-		url: 'http://localhost:8080/einstieg2014/rest/DocumentStorage/createDoc',
+		url: 'http://localhost:8080/patrepo/rest/PatientRepository/createPat',
 		type: 'POST',
 		data: jsonString,
 		contentType: "application/json",
 		dataType: "json",
-		//sonst kann sein, dass man das Dokument anzeigen m�chte, bevor es fertig in die DB geschrieben wurde
+
 		async: false,
 		
 			}).done(function(data) {
-				//Die dokumentenID des gerade erstellten Doks (wird zur�ckgegeben) schreiben in die DokID
-				//Hier evtl doch einfach alles in Cookie ? 
-				$("#dokID").data("dokId", data.docId);
-				//console.log("Zur�ckgegebene Daten:" + data);
-				//console.log("Inhalt dokID:" + $("#dokID").data("dokId"));
+				$("#patid").data("patId", data.insuranceId);
+				console.log("Zur�ckgegebene Daten:" + data);
 			}).fail(function(error) {
 				
 			});
@@ -39,5 +36,5 @@ handler.bindDokEvents = function() {
 
 
 $(document).ready(function(){
-	handler.bindDokEvents();
+	handler.bindPatEvents();
 });

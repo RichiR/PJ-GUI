@@ -16,7 +16,7 @@ PatID
 
 <script src="js/jquery.mobile.js"></script>
 <script src="js/vorlage.js"></script>
-
+<script src="js/patient_erstellen.js"></script>
 
 <title>US5</title>
 
@@ -35,8 +35,8 @@ PatID
        
   <!-- Inhaltsbereich -->
 <div data-role="main" class="ui-content" id="mainDiv">
-<h2 style="text-align:left;"> Patient erstellen</h2>
-	<h3 style="text-align:left;">Patient: <span id="patientName">Max Mustermann</span></h3>
+<h2 style="text-align:left;"> Patient erstellen<span id="patid" data-patId=""></span></h2>
+	
     	
 	    <label for="name_tf">Name</label>
 	    <input type="text" id="name_tf"></input>
@@ -44,11 +44,15 @@ PatID
 	    <input type="text" id="vorname_tf"></input>
 	    <label for="gebtag_tf">Geburtstag</label>
 	    <input type="date" id="gebtag_tf"></input>
+	    <label for="geschlecht_rd">Geschlecht</label>
+	    <input type="radio" name="geschlecht_rd" value="m"> M&auml;nnlich
+    	<input type="radio" name="geschlecht_rd" value="w"> Weiblich
+	    
 
 <div align="right">
 <!-- TODO: Speichern implementieren -->
 <div class="buttonsSmall">
-	<a href="PatientAnzeigen.html"><button id="newDoc" type="button" data-mini="false" data-inline="true" data-icon="check" >speichern</button></a>
+	<button id="newPatBtn" type="button" data-mini="false" data-inline="true" data-icon="check" >speichern</button>
 </div>
 
 </div>
