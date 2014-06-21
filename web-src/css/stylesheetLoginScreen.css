@@ -10,8 +10,8 @@ margin-top: 100px;
 
 
 .center-button{
-margin: 0 auto;
-margin-top: -100px;
+	top: 300px; 
+	right: 200px;
 
 width: 250px;
 height: 175px;
