@@ -4,6 +4,9 @@ $(document).ready(function(){
 	if(getCookie("Benutzer") != null){
 		$("#benutzer_name").text(getCookie("Benutzer").split("=")[1]);
 	}
+	else{
+		console.log("Im Benutzername setzen: else");
+	}
 });
 
 function getCookie(cname) {

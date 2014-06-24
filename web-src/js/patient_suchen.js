@@ -31,7 +31,7 @@ handler.bindHomeEvents = function() {
 			
 			var output = '';
 			for (key in data) {
-		        output += '<li>' + data[key].firstName + '</li>';
+		        output += '<li class="patLink" data-patId='+data[key].insuranceId+'>' + data[key].firstName + '</li>';
 		    }
 			
 			$('#searchPat').append(output).trigger('create');
@@ -46,7 +46,7 @@ handler.bindHomeEvents = function() {
 		jQuery.ajax({
 			
 			type: 'GET',
-			url: "http://localhost:8080/einstieg2014/rest/PatientenRepository/findPatientById?VersId="+id,
+			url: "http://localhost:8080/patrepo/rest/PatientenRepository/findPatientById?VersId="+id,
 			
 			contentType: "application/json",
 			
@@ -57,7 +57,7 @@ handler.bindHomeEvents = function() {
 					
 					var output = '';
 					for (key in data) {
-				        output += '<li>' + data[key].firstName + '</li>';
+				        output += '<li class="patLink" data-patId='+data[key].insuranceId+'>' + data[key].firstName + '</li>';
 				    }
 					
 					$('#searchPat').append(output).trigger('create');
@@ -68,8 +68,36 @@ handler.bindHomeEvents = function() {
 		
 			
 	}
-	
 		
+	});
+	$("#allePats").click(function(){
+			jQuery.ajax({
+			
+			type: 'GET',
+			url: "http://localhost:8080/patrepo/rest/PatientenRepository/allPatients",
+			
+			contentType: "application/json",
+			}).done(function(data){
+				console.log("Alle Patienten laden: Zurückbekommen: "+ data);
+				
+				var output = '';
+				for (key in data) {
+			        output += '<li class="patLink" data-patId='+data[key].insuranceId+'>' + data[key].firstName + '</li>';
+			    }
+				
+				$('#searchPat').append(output).trigger('create');
+			}).fail(function(){
+				console.log("Fehler beim Alle Patienten laden");
+			});
+			
+	$(".patLink").click(function(){
+		var $this = $(this);
+		//pat id rausholen
+		var patid = $this.data("patId");
+		
+		//Patient anzeigen mit dieser Id
+		window.location = "PatientAnzeigen.html?patid="+patid;
+	});
 });
 	
 };

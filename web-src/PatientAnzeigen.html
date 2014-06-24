@@ -17,6 +17,7 @@ PatID
 <script src="js/jquery.mobile.js"></script>
 <script src="js/vorlage.js"></script>
 <script src="js/benutzername_setzen.js"></script>
+<script src="js/patient_anzeigen.js"></script>
 
 <title>US5</title>
 
@@ -39,23 +40,31 @@ PatID
   <!-- Inhaltsbereich -->
   <div data-role="main" class="ui-content" id="mainDiv">
   	
-    	<h1 data-patId="Hier_kommt_die_PatId_rein">Patient anzeigen</h1>
-	    <label for="name_lbl">Name</label>
-	    <div></div>
-	    <label type="text" id="name_lbl"></label>
-	    <label for="vorname_lbl">Vorname</label>
-	    <label type="text" id="vorname_lbl"></label>
-	    <label for="gebtag_lbl">Geburtstag</label>
-	    <label type="date" id="gebtag_lbl"></label>
-	    <label for="versId_lbl">Versicherungs-ID</label>
-	    <label type="text" id="versId_lbl"></label>
+	    <h2 style="text-align:left;">Patient anzeigen: <span id="PatId" data-patid="Hier_kommt_id_rein">Patient XYZ</span></h2>
+	<div data-role="fieldcontain">
+	    <label for="name">Name:</label>
+	    <input type="text" name="disabled" id="name" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="vorname">Vorname:</label>
+	    <input type="text" name="disabled" id="vorname" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="gtag">Geburtstag:</label>
+	    <input type="text" name="disabled" id="gtag" value=""  />
+	</div>
+	<div data-role="fieldcontain">
+	    <label for="id">VersicherungsID:</label>
+	    <input type="text" name="disabled" id="id" value=""  />
+	</div>
+	
 	    
 <div align="right">
-	<!--  <button id="btn_newDoc" type="button" href="DokumentErstellen.html" data-mini="false" data-inline="true" data-icon="plus" >Dokument erstellen</button>-->
+	 <!--  <button id="btn_newDoc" type="button" href="DokumentErstellen.html" data-mini="false" data-inline="true" data-icon="plus" >Dokument erstellen</button>-->
 <div class="buttonsSmall">
 	
 	
-	 	<a href="DokumentErstellen.html" ><button type="button" id="btn_newDoc" data-icon="plus">Dokument erstellen</button></a>
+	 	<!--  <a href="DokumentErstellen.html" >--><button type="button" id="btn_newDoc" data-icon="plus">Dokument erstellen</button><!--  </a>-->
 </div>
 <div class="buttonsSmall">
 	<a href="#" ><button id="btn_searchDoc" type="button" data-mini="false" data-inline="true" data-icon="search" >Dokument suchen</button></a>

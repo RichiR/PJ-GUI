@@ -7,10 +7,10 @@ handler.bindPatEvents = function() {
 	var vorname =  $("#vorname_tf").val();
 	var name =  $("#name_tf").val();
 	var bdate = $("#gebtag_tf").val();
-	var geschlecht = $("input:radio[name=geschlecht_rd]:checked").val();
+	var geschlecht = $("input:radio[name=geschlecht_rd]:checked").attr("value");
 	
 	//create json object
-	var dokJson = {"firstname":vorname,"lastname":name,"bday":bdate,"gender":geschlecht,};
+	var dokJson = {"name":name,"firstName":vorname,"gender":geschlecht,"birthDate":bdate};
 	jsonString = JSON.stringify(dokJson);
 	
 	
